@@ -1,0 +1,236 @@
+* {
+    box-sizing: border-box;
+}
+.left {
+    width: 20%;
+    display: inline-block;
+}
+.right {
+    /*border: solid;*/
+    width: 80%;
+    float: right;
+    height: 100%;
+    overflow: auto;
+    /*margin: 0;*/
+    /*padding: 0;*/
+    /*boder:solid;*/
+}
+.sidebar {
+    /*margin: 0;*/
+    /*padding: 0;*/
+    width: 20%;
+    background-color: #f1f1f1;
+    position: fixed;
+    top:0;
+    left: 0;
+    height: 100%;
+    /*overflow: auto;*/
+}
+.sidebar a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.dropdown-button {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.sidebar a:hover, .dropdown-button:hover {
+    color: #555555;
+}
+.active {
+    background-color: green;
+    color: white;
+}
+.dropdown-container {
+    display: none;
+    background-color: #262626;
+    padding-left: 8px;
+}
+.dropdown-container a {
+    color: white;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+    float: right;
+    padding-right: 8px;
+}
+
+/* Some media queries for responsiveness */
+@media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+}
+.head {
+    /*width: 100%;*/
+    /*border: solid;*/
+}
+.search {
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+.search-form {
+    display: flex;
+}
+.search input[type="text"] {
+    width: 100%;
+    border: 3px solid mediumseagreen;
+    border-right: none;
+    padding: 5px;
+    height: 36px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #9DBFAF;
+}
+.search input[type="text"]:focus {
+    color: mediumseagreen;
+}
+.search button
+{
+    width: 40px;
+    height: 36px;
+    border: 1px solid mediumseagreen;
+    background: mediumseagreen;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+}
+.content {
+    margin-top: 30px;
+    overflow: auto;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+/* Zebra striping */
+tr:nth-of-type(odd) {
+    background: #eee;
+}
+th {
+    background: #333;
+    color: white;
+    font-weight: bold;
+}
+td, th {
+    padding: 6px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+hr {
+    margin-top: 160% ;
+    border: 3px solid green;
+    border-radius: 5px;
+}
+button {
+    background-color: #4CAF50;
+    width: 30%;
+    padding: 10px;
+}
+
+.download:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.form{
+    border: 3px solid #f1f1f1 ;
+
+}
+.container input{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.modal-box{
+    display: none;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding-top: 60px;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content{
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%; /* Could be more or less, depending on screen size */
+}
+
+.close {
+    color: #000;
+    float: right;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+/*style of Edit-Schedule*/
+.add button {
+    background: #4CAF50;
+    color: black;
+    width: 10%;
+    padding: 10px;
+    margin: 10px;
+}
+.modal{
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal .modal-ct{
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+.form-item {
+    display: block;
+    padding: 5px;
+    width: 100%;
+}

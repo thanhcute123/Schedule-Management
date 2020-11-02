@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Schedule Management System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="css/schedule_style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div content="container">
+        <div class="head">
+            <div class="search">
+                <form class="search-form">
+                    <input type="text" placeholder="search...">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+            <div class="add">
+                <button id="add"><i class="fa fa-plus"></i> Add</button>
+            </div>
+            <div id="modal-box" class="modal">
+                <div class="modal-ct">
+                    <span id="close-modal" class="close">&times;</span>
+                    <form class="form">
+                        <label class="form-item" for="id">STT:</label>
+                        <input class="form-item" id="id" placeholder="STT..." type="number">
+                        <label class="form-item" for="name">Học vị/Học hàm:</label>
+                        <input class="form-item" id="name" placeholder="Học hàm/học vị..." type="text">
+                        <label class="form-item" for="giang-vien">Phân công giảng viên giảng dạy:</label>
+                        <input class="form-item" id="giang-vien" type="text" placeholder="Giảng viên...">
+                        <label class="form-item" for="ma-mon-hoc">Mã môn học:</label>
+                        <input class="form-item" id="ma-mon-hoc" placeholder="Mã môn học..." type="text">
+                        <label class="form-item" for="mon-hoc">Môn học:</label>
+                        <input class="form-item" id="mon-hoc" placeholder="Môn học..." type="text">
+                        <label class="form-item" for="BT/TH">BT/TH:</label>
+                        <input class="form-item" id="BT/TH" placeholder="BT/TH..." type="text">
+                        <label class="form-item" for="so-tc">Số TC:</label>
+                        <input class="form-item" id="so-tc" placeholder="Số TC..." type="number">
+                        <label class="form-item" for="khoa">Khóa:</label>
+                        <input class="form-item" id="khoa" placeholder="Khóa..." type="text">
+                        <label class="form-item" for="Nganh-hoc">Ngành học:</label>
+                        <input class="form-item" id="nganh-hoc" placeholder="Ngành học..." type="text">
+                        <label class="form-item" for="lop">Lớp:</label>
+                        <input class="form-item" id="lop" placeholder="Lớp..." type="text">
+                        <label class="form-item" for="hoc-ky">Học kỳ:</label>
+                        <input class="form-item" id="hoc-ky" placeholder="Học kỳ..." type="number">
+                        <label class="form-item" for="thu">Thứ:</label>
+                        <input class="form-item" id="thu" placeholder="Thứ..." type="number">
+                        <label class="form-item" for="tiet">Tiết:</label>
+                        <input class="form-item" id="tiet" placeholder="Tiết..." type="text">
+                        <label class="form-item" for="bo-mon">Bộ môn:</label>
+                        <input class="form-item" id="bo-mon" placeholder="Bộ môn..." type="text">
+
+                        <button id="save" type="submit">Add</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <table>
+                <thead>
+                <th>STT</th>
+                <th>Học hàm/học vị</th>
+                <th>Phân công giảng viên giảng dạy</th>
+                <th>Mã môn học</th>
+                <th>Môn học</th>
+                <th>BT/TH</th>
+                <th>Số TC</th>
+                <th>Khóa</th>
+                <th>Ngành học</th>
+                <th>Lớp</th>
+                <th>Học Kỳ</th>
+                <th>Thứ</th>
+                <th>Tiết</th>
+                <th>Bộ Môn</th>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><input type="checkbox" name="name1" />&nbsp 1</td>
+                    <td>TS</td>
+                    <td>Võ Thị Như Quỳnh</td>
+                    <td>MAT3311</td>
+                    <td>Lý thuyết và biểu diễn nhóm</td>
+                    <td>LT</td>
+                    <td>3</td>
+                    <td>62</td>
+                    <td>Toán học</td>
+                    <td>K62A1T</td>
+                    <td>1</td>
+                    <td>6</td>
+                    <td>3-5</td>
+                    <td>ĐS</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="name2" />&nbsp 2</td>
+                    <td>PGS,TS</td>
+                    <td>Đặng Đình Châu</td>
+                    <td>MAT3345</td>
+                    <td>Lý thuyết ổn định của phương trình vi phân</td>
+                    <td>LT</td>
+                    <td>3</td>
+                    <td>62</td>
+                    <td>Toán học</td>
+                    <td>K62A1T</td>
+                    <td>1</td>
+                    <td>5</td>
+                    <td>3-5</td>
+                    <td>GT</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="name3" />&nbsp 3</td>
+                    <td>TS</td>
+                    <td>Nguyễn Thịnh</td>
+                    <td>MAT3321</td>
+                    <td>Quá trình ngẫu nhiên</td>
+                    <td>LT</td>
+                    <td>3</td>
+                    <td>62</td>
+                    <td>Toán học+Tin học</td>
+                    <td>K62A1T+K62A2T</td>
+                    <td>1</td>
+                    <td>6</td>
+                    <td>8-10</td>
+                    <td>XS-TK</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="name4" />&nbsp 4</td>
+                    <td>TS</td>
+                    <td>Đặng Anh Tuấn</td>
+                    <td>MAT2313</td>
+                    <td>Phương trình đạo hàm riêng 1</td>
+                    <td>LT</td>
+                    <td>3</td>
+                    <td>63</td>
+                    <td>CNKHTN</td>
+                    <td>K63 CNKHTN</td>
+                    <td>1</td>
+                    <td>5</td>
+                    <td>1-3</td>
+                    <td>GT</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="name5" />&nbsp 5</td>
+                    <td>TS</td>
+                    <td>Phạm Việt Hải</td>
+                    <td>MAT23045,6</td>
+                    <td>Giải Tích 3</td>
+                    <td>LT</td>
+                    <td>3</td>
+                    <td>63</td>
+                    <td>Sư Phạm Toán</td>
+                    <td>K63A1S</td>
+                    <td>1</td>
+                    <td>3</td>
+                    <td>8-10</td>
+                    <td>GT</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="name6" />&nbsp 6</td>
+                    <td>TS</td>
+                    <td>Đào Phương Bắc</td>
+                    <td>MAT2310 1</td>
+                    <td>Hình học giải tích</td>
+                    <td>LT</td>
+                    <td>3</td>
+                    <td>63</td>
+                    <td>Toán học</td>
+                    <td>K63A1T</td>
+                    <td>1</td>
+                    <td>6</td>
+                    <td>3-5</td>
+                    <td>ĐS</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="name7" />&nbsp 7</td>
+                    <td>ThS</td>
+                    <td>Hà Mỹ Linh</td>
+                    <td>MAT3524</td>
+                    <td>Linux</td>
+                    <td>LT</td>
+                    <td>3</td>
+                    <td>63</td>
+                    <td>MT&KHTT</td>
+                    <td>K63A3,4</td>
+                    <td>1</td>
+                    <td>6</td>
+                    <td>3-5</td>
+                    <td>Tin</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<script language="JavaScript">
+    const button = document.getElementById("add");
+    const modal = document.getElementById("modal-box");
+    button.onclick = function (){
+        modal.style.display = 'block';
+    }
+
+    const close = document.getElementById('close-modal');
+    close.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+</body>
+</html>
